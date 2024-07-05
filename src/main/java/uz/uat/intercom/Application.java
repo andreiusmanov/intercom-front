@@ -8,6 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer;
 import org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableAsync;
+
 import uz.uat.intercom.data.SamplePersonRepository;
 
 /**
@@ -19,6 +21,7 @@ import uz.uat.intercom.data.SamplePersonRepository;
  */
 @SpringBootApplication
 @Theme(value = "intercom")
+@EnableAsync
 public class Application implements AppShellConfigurator {
 
     public static void main(String[] args) {
